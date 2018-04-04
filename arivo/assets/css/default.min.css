@@ -7,11 +7,11 @@
 }
 
 #header-container {
-	height: 70px
+	height: 86px
 }
 
 #header .bg-solid {
-	background-color: rgba(53, 60, 68, 1)
+	background-color: #414042
 }
 
 @media only screen and (max-width:767px) {

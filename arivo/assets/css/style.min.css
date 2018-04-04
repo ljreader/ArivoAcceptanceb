@@ -1047,7 +1047,7 @@ a.button.proceed-btn:active {
 	right: 0;
 	left: 0;
 	z-index: 888;
-	min-height: 60px;
+	min-height: 82px;
 	width: 100%;
 	transition: all .3s ease
 }
