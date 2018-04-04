@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="/etc/designs/chase-ux/favicon.ico" />
+	<link rel="icon" href="/etc/designs/chase-ux/favicon.ico" />
+	<link rel="apple-touch-icon" href="/etc/designs/chase-ux/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/etc/designs/chase-ux/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/etc/designs/chase-ux/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/etc/designs/chase-ux/favicon-152.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="/etc/designs/chase-ux/favicon-144.png">
+	<link rel="preload" href="/c/031118/etc/designs/chase-ux/css/site.min.css" as="style" type="text/css">
+	<meta content="app-id=298867247, affiliate-data=JPMorganChase" name="apple-itunes-app">
+	<title>primary-tool-liquid</title>
+	<link rel="stylesheet" href="/c/031118/etc/designs/chase-ux/css/blue-ui.min.css" type="text/css">
+	<link rel="stylesheet" href="/c/031118/etc/designs/chase-ux/css/site.min.css" type="text/css">
+
+	<div class="theme theme-selector"></div>
+	<script>
+		(function (e) {
+			"use strict";
+			e.picturefill = function () {
+				var t = e.document.getElementsByTagName("span");
+				for (var n = 0, r = t.length; n < r; n++) {
+					if (t[n].getAttribute("data-picture") !== null) {
+						var i = t[n].getElementsByTagName("span"),
+							s = [];
+						for (var o = 0, u = i.length; o < u; o++) {
+							var a = i[o].getAttribute("data-media");
+							if (!a || e.matchMedia && e.matchMedia(a).matches) {
+								s.push(i[o])
+							}
+						}
+						var f = t[n].getElementsByTagName("img")[0];
+						if (s.length) {
+							var l = s.pop();
+							if (!f || f.parentNode.nodeName === "NOSCRIPT") {
+								f = e.document.createElement("img");
+								f.alt = t[n].getAttribute("data-alt")
+							} else if (l === f.parentNode) {
+								continue
+							}
+							f.src = l.getAttribute("data-src");
+							l.appendChild(f);
+							f.removeAttribute("width");
+							f.removeAttribute("height")
+						} else if (f) {
+							f.parentNode.removeChild(f)
+						}
+					}
+				}
+			};
+			if (e.addEventListener) {
+				e.addEventListener("resize", e.picturefill, false);
+				e.addEventListener("DOMContentLoaded", function () {
+					e.picturefill();
+					e.removeEventListener("load", e.picturefill, false)
+				}, false);
+				e.addEventListener("load", e.picturefill, false)
+			} else if (e.attachEvent) {
+				e.attachEvent("onload", e.picturefill)
+			}
+		})(this)
+	</script>
+	<script src="/c/031118/etc/designs/chase-ux/clientlibs/jquery/js/jquery-1.10.2.min.js"></script>
+	<!--[if lte IE 9]>
+    <script src="/c/031118/etc/designs/chase-ux/clientlibs/chase-ux/js/vendor/jquery-ajaxtransport-xdomainrequest.js"></script>
+    <script src="/c/031118/etc/designs/chase-ux/clientlibs/modernizr/js/modernizr-2.8.3.min.js"></script>
+  <![endif]-->
+	<script>
+		var tagManagerConfig = {
+			tagServer: "https://www.chase.com"
+		};
+	</script>
+	<script src="/c/031118/apps/chase/clientlibs/foundation/scripts/Reporting.js"></script>
+	<script>
+		var langRedirectURL = "";
+	</script>
+	<script src="/c/031118/etc/designs/chase-ux/clientlibs/require/js/require.min.js"></script>
+	<script>
+		requirejs.config({
+			baseUrl: '/c/031118/etc/designs/chase-ux/clientlibs/chase-ux/js',
+			paths: {
+				"adservice": "https://sites.chase.com/apps/campaignmanagement/clientlibs/slotplacement/js/slotplacement.min",
+				"slotplacement/slotplacementconfig": "https://sites.chase.com/services/campaignmanagement/clientconfig.slotplacementconfig",
+				"content/conf/appsconfig": tagManagerConfig.tagServer + "/etc/chase/appsconfig"
+			}
+		});
+		define("jquery", [], function () {
+			return jQuery;
+		});
+		define("slotplacement/clientconfig", function () {
+			return {
+				timeout: "4000"
+			}
+		});
+	</script>
+	<script src="/c/031118/etc/designs/chase-ux/clientlibs/chase-ux/js/dist/chase-ux.min.js"></script>
+
+	<script>
+		require(["main"], function () {});
+
+		/* Check for XFS */
+		if (top != self) {
+			require(["amd/xfs"], function (XFS) {
+				XFS.init();
+			});
+		}
+	</script>
+
+	<script>
+		require(["main"], function () {
+
+			var cookieConfig = {
+				homeEquityCookie: false,
+				mortgageCookie: false
+			};
+			require(["amd/cookie.chase-campaign"], function (ChaseCampaign) {
+				ChaseCampaign.init(cookieConfig);
+			});
+
+		});
+	</script>
+
+</head>
+
+<body data-archetype="returning" data-voc-referer="http://www.chase.com/content/chase-ux/en/structured/module/direct-to-dealer/primary-tool-liquid.html">
+	<div class="home__body">
+		<a id="skipToMainContent" href="#main" class="skiplink">Skip to main content</a>
+		<!--googleoff: index-->
+		<div class="browserupdate">
+			<div class="browser-message container-fluid">
+				<div class="feature-container">
+					<div class="browser-message__inner">
+						<div class="browser-message__inner-container">
+							<img class="browser-message__icon" src="/etc/designs/chase-ux/css/img/ie_alert.png" alt="Alert Message Icon" />
+							<div class="browser-message__title">
+								<p>Please update your browser.</p>
+							</div>
+							<div class="browser-message__desc">
+								<p>Please update your browser now to help protect your accounts and give you a better experience on our site.&nbsp;
+									<a
+									  class="chaseanalytics-track-link regular-link " data-pt-name="fm_browser-msg" href="https://www.chase.com/digital/resources/privacy-security/security/system-requirements">See your browser choices</a>.</p>
+							</div>
+							<a class="browser-message__dismiss-btn" href="#">
+								<span class="icon-close" aria-hidden="true"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--googleon: index-->
+		<!--googleoff: index-->
+		<div class="site-message container-fluid">
+			<span class="accessible-text">Begin Site Message Content</span>
+			<div class="feature-container">
+				<div class="site-message__inner">
+					<div class="site-message__inner-container">
+						<img class="site-message__icon" src="/etc/designs/chase-ux/css/img/high-alert-icon.png" alt="Alert Message Icon" />
+						<div class="site-message__title"></div>
+						<div class="site-message__desc"></div>
+					</div>
+				</div>
+			</div>
+			<span class="accessible-text">End Site Message Content</span>
+		</div>
+		<!--googleon: index-->
+		<!--googleoff: index-->
+		<div class="logoff">
+			<div class="timeout-message__wrapper">
+				<div class="timeout-message__container">
+					<div class="timeout-message container-fluid">
+						<div class="feature-container">
+							<div class="timeout-message__inner">
+								<div class="timeout-message__text">
+									<p class="timeout-message__text-msg" tabindex="-1" data-session-message>
+										We’ve signed you out of your account.</p>
+									<p class="timeout-message__text-msg" tabindex="-1" data-logoff-message>
+										<span class="timeout-message__checkmark">
+											<img src="/etc/designs/chase-ux/css/img/checkmark.png" alt="Logoff" />
+										</span>You’ve successfully signed out</p>
+									<button type="button" class="timeout-message__dismiss-btn">
+										<span class="icon-close"></span>
+										<span class="accessible-text">Close this message</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--googleon: index-->
+		<script>
+			require(["main", "adservice"], function () {
+				require(["slotplacement/topic", "amd/browser-message"], function (Topic, BrowserMessage) {
+					var options = {
+						url: "https://secure.chasecdn.com",
+						audienceIds: ""
+					};
+					Topic.subscribe('adUpdate', function (pageId, data) {
+
+						if (data._a) {
+							options.audienceIds = data._a;
+						}
+						BrowserMessage.init(options);
+
+					});
+					Topic.subscribe('adError', function () {
+
+						BrowserMessage.init(options)
+
+					});
+				});
+			});
+		</script>
+		<div class="module ratepayment">
+			<script type="text/javascript" src="/etc/designs/chase-ux/clientlibs/chase-ux/js/d2d/d2d.min.js"></script>
+
+			<input type="hidden" id="rptErrorMsg" value="Server returned with Error code: 500 (Internal error). Please try again later.">
+			<input type="hidden" id="getInfoErrorMsg" value="It looks like this part of our site is not working right now. Please try again later. Thanks for your patience.">
+			<input type="hidden" id="nonPilotMessage" value="Please choose another state to get a rate.">
+			<input type="hidden" id="privateLabelMessage" value="Please choose another make to continue.">
+			<input type="hidden" id="buttonTrackingTag" value="">
+
+			<input type="hidden" id="stateErrMessage" value="Please choose a State value">
+			<input type="hidden" id="creditErrMessage" value="Please choose Credit Rating">
+			<input type="hidden" id="amountInvalidErrMessage" value="Loan amount should be greater than $4000.00 and less than $600000.00">
+			<input type="hidden" id="makeErrMessage" value="Please choose a make value">
+
+			<input type="hidden" id="rptLoanMinValue" value="4000">
+			<input type="hidden" id="rptLoanMaxValue" value="600000">
+
+			<!-- rpt form start -->
+			<div class="rate-tool feature-container">
+				<div class="rate-tool__intro">
+					<div class="rate-tool__intro--title">
+						<h1 id="d2d-first-heading" tabindex="-1"></h1>
+					</div>
+					<div class="rate-tool__intro--text">
+						<p></p>
+						<div class="rate-tool__page--error hidden">
+							<img src='/etc/designs/chase-ux/css/img/error-icon.png' alt='Error Message Icon' class='rate-tool__page--error_icon'
+							/>
+							<span class="rate-tool__page--error_text">Server returned with Error code: 500 (Internal error). Please try again later.</span>
+						</div>
+					</div>
+				</div>
+				<span class="accessible-text">
+					<h2>QuickDrive Rate Form</h2>
+				</span>
+				<span class="accessible-text">Start of Custom Rate & Payment form input</span>
+				<div class="rate-tool__forms">
+					<form>
+						<fieldset>
+							<legend>Rate and Payment Tool</legend>
+							<div class="col-sm-6 col-xs-12">
+								<p>
+									<label>
+										<span class="label__text label label__one-line col-lg-6 col-xs-12">
+											<label id="type">Type</label>
+										</span>
+										<span class="field field__validation city-name col-lg-6 col-xs-12 d2djpuibase wrapradiobuttond2d" role="radiogroup">
+											<input id="type-of-car-new" type="radio" value="NEW" name="type-of-car" checked="true" role="radio" aria-checked="true" aria-label="Type New">
+											<label id="typeofcarnew" class="radio-btn-label alternated2d" for="type-of-car-new">New</label>
+											<input id="type-of-car-used" type="radio" value="USED" name="type-of-car" role="radio" aria-label="Type Used">
+											<label id="typeofcarused" class="radio-btn-label alternated2d" for="type-of-car-used">Used</label>
+										</span>
+									</label>
+								</p>
+								<p>
+									<label>
+										<span class="label label__text label__one-line col-lg-6 col-xs-12">Year</span>
+										<span class="field field__validation city-name col-lg-6 col-xs-12">
+											<select aria-required="true" type="text" name="year" id="year" class="citytab-input webkit" aria-label="Year">
+												<option value="-1" disabled="true" selected="true">Choose one</option>
+											</select>
+										</span>
+									</label>
+								</p>
+								<p>
+									<label>
+										<span class="label label__text label__one-line col-lg-6 col-xs-12 make-name">Make
+											<span class="tooltip-wrapper">
+												<a href="" data-toggle="tooltip" data-html="true" data-trigger="hover" data-placement="auto bottom" class="tooltip__text"
+												  title="This list is limited to cars for which we offer financing. This is subject to change at any time and we may have other conditions, such as not permitting the car to be used for commercial purposes (e.g.,  taxi or delivery van).">
+													<img alt="tool tip icon for Make" src="/etc/designs/chase-ux/css/img/inf-icon.png" class="tooltip__icon" />
+													<span class="accessible-text">Tool tip for Make</span>
+												</a>
+											</span>
+										</span>
+
+
+										<span class="field field__validation city-name col-lg-6 col-xs-12 make-name">
+											<select aria-required="true" type="text" name="make" id="make" class="citytab-input webkit" aria-label="Make">
+												<option value="-1" disabled="true" selected="true">Choose one</option>
+											</select>
+										</span>
+									</label>
+								</p>
+							</div>
+
+							<div class="col-sm-6 col-xs-12">
+								<p>
+									<label>
+										<span class="label label__text label__one-line col-lg-6 col-xs-12 state-name">State</span>
+										<span class="field field__validation city-name col-lg-6 col-xs-12 state-name">
+											<select aria-required="true" type="text" name="state" id="state" class="citytab-input webkit" aria-label="State">
+												<option value="-1" disabled="true" selected="true">Choose one</option>
+												<option value="AL">Alabama</option>
+												<option value="AK">Alaska</option>
+												<option value="AZ">Arizona</option>
+												<option value="AR">Arkansas</option>
+												<option value="CA">California</option>
+												<option value="CO">Colorado</option>
+												<option value="CT">Connecticut</option>
+												<option value="DE">Delaware</option>
+												<option value="DC">Dist of Columbia</option>
+												<option value="FL">Florida</option>
+												<option value="GA">Georgia</option>
+												<option value="HI">Hawaii</option>
+												<option value="ID">Idaho</option>
+												<option value="IL">Illinois</option>
+												<option value="IN">Indiana</option>
+												<option value="IA">Iowa</option>
+												<option value="KS">Kansas</option>
+												<option value="KY">Kentucky</option>
+												<option value="LA">Louisiana</option>
+												<option value="ME">Maine</option>
+												<option value="MD">Maryland</option>
+												<option value="MA">Massachusetts</option>
+												<option value="MI">Michigan</option>
+												<option value="MN">Minnesota</option>
+												<option value="MS">Mississippi</option>
+												<option value="MO">Missouri</option>
+												<option value="MT">Montana</option>
+												<option value="NE">Nebraska</option>
+												<option value="NV">Nevada</option>
+												<option value="NH">New Hampshire</option>
+												<option value="NJ">New Jersey</option>
+												<option value="NM">New Mexico</option>
+												<option value="NY">New York</option>
+												<option value="NC">North Carolina</option>
+												<option value="ND">North Dakota</option>
+												<option value="OH">Ohio</option>
+												<option value="OK">Oklahoma</option>
+												<option value="OR">Oregon</option>
+												<option value="PA">Pennsylvania</option>
+												<option value="RI">Rhode Island</option>
+												<option value="SC">South Carolina</option>
+												<option value="SD">South Dakota</option>
+												<option value="TN">Tennessee</option>
+												<option value="TX">Texas</option>
+												<option value="UT">Utah</option>
+												<option value="VT">Vermont</option>
+												<option value="VA">Virginia</option>
+												<option value="WA">Washington</option>
+												<option value="WV">West Virginia</option>
+												<option value="WI">Wisconsin</option>
+												<option value="WY">Wyoming</option>
+											</select>
+										</span>
+									</label>
+								</p>
+								<p>
+									<label>
+										<span class="label label__text col-lg-6 col-xs-12 credit-name">Estimated credit rating
+											<span class="tooltip-wrapper">
+												<a href="" data-toggle="tooltip" data-html="true" data-trigger="hover" data-placement="auto bottom" class="tooltip__text"
+												  title=" <b>Estimated FICO credit ratings:</b><br><br><b>Excellent credit:</b> 740 and above<br> <br>
+<b>Very good credit:</b> between 680-739 <br><br>
+<b>Good credit:</b> between 620-679<br><br>
+<b>Fair credit:</b> 619 and below">
+													<img alt="tool-tip" src="/etc/designs/chase-ux/css/img/inf-icon.png" class="tooltip__icon" />
+													<span class="accessible-text">Tool tip for Estimated credit rating</span>
+												</a>
+											</span>
+										</span>
+										<span class="field field__validation city-name col-lg-6 col-xs-12 credit-name">
+											<select aria-required="true" type="text" name="credit-rating" id="credit-rating" class="citytab-input webkit" aria-label="Estimated credit rating">
+												<option value="-1" disabled="true" selected="true">Choose one</option>
+												<option value="Excellent">Excellent</option>
+												<option value="Very Good">Very Good</option>
+												<option value="Good">Good</option>
+												<option value="Fair">Fair</option>
+											</select>
+										</span>
+									</label>
+								</p>
+								<p>
+									<label>
+										<span class="label label__text label__one-line col-lg-6 col-xs-12 amount-name">Amount
+											<span class="tooltip-wrapper">
+												<a href="" data-toggle="tooltip" data-html="true" data-trigger="hover" data-placement="auto bottom" class="tooltip__text"
+												  title="  Enter the amount you think you'll need to purchase your car. Your requested loan amount must be at least $4,000.<br>
+Keep in mind that you may need additional funds for anything the dealer may add that isn't included in the MSRP.<br>Some examples: applicable sales tax, title and registration fees, dealer fees, optional products and services, and other charges.">
+													<img alt="tool-tip" src="/etc/designs/chase-ux/css/img/inf-icon.png" class="tooltip__icon" />
+													<span class="accessible-text">Tool tip for Amount</span>
+												</a>
+											</span>
+										</span>
+										<span class="field field__validation city-name col-lg-6 col-xs-12 amount-name">
+											<span class="input__placeholder--prefix" data-characters="1.5">$</span>
+											<input aria-required="true" type="text" name="amount" id="amount" class="textbox" maxlength="32" aria-label="Amount">
+										</span>
+									</label>
+								</p>
+							</div>
+
+						</fieldset>
+						<div class="form-controls">
+							<button id="rpt-get-rate-button" class="primary-disabled chaseanalytics-track-link" data-pt-name="RPT-GetInfo-Btn" tabindex="-1">
+								<span>Get Info</span>
+							</button>
+						</div>
+					</form>
+				</div>
+				<span class="accessible-text">End of Custom Rate & Payment form input</span>
+				<span class="accessible-text">Start of Results from Custom Rate & Payment tool</span>
+				<div id="rpt-speedbump-wrapper"></div>
+				<div class="rate-tool__repeat--search">Scroll down to see your results.</div>
+				<div class="rate-tool__search-results-wrapper">
+					<div class="rate-tool__search-results-wrapper__result"></div>
+					<div id="rpt-disclosure" class="rate-tool__disclosure hidden">
+						<span id="apr-disc-id" class="disclosure" data-disclosure-url="/content/chase-ux/en/structured/module/disclosure/personal/auto-loans/auto-disc-purchase-apr/_jcr_content/module/disclosurecontainer/disclaimer.html?wcmmode=disabled"></span>
+					</div>
+				</div>
+
+				<script id="rateToolResultTemplate" type="text/template">
+					<div class="rate-tool__search-result" id="rate-tool-result-<%=resultsRow%>">
+						<div class="rate-tool__search-result-header">
+							<div class="col-lg-6 col-xs-10">
+								<span tabindex="0" class="rate-tool__search-result-tab-able rate-tool__search-result-heading">
+									<%=Type%>
+										<%=Year%>
+											<%=Make%>
+								</span>
+								<span class="accessible-text">
+									<h3>
+										<%=Type%>
+											<%=Year%>
+												<%=Make%>
+									</h3>
+								</span>
+							</div>
+							<div class="col-lg-6 col-xs-2">
+								<a class="icon-close rate-tool__search-results-set" href="#" id="<%=resultsRow%>" role="button">
+									<span class="accessible-text">Close this result set.</span>
+								</a>
+							</div>
+						</div>
+						<div class="rate-tool__search-result-body">
+							<div class=" col-sm-4 col-xs-12">
+								<div>
+									<span class="rate-tool__search-result-body-left_label">State</span>
+									<span class="rate-tool__search-result-body-left_data">
+										<%=State%>
+									</span>
+								</div>
+								<div>
+									<span class="rate-tool__search-result-body-left_label">Loan Amount</span>
+									<span class="rate-tool__search-result-body-left_data">$
+										<%=Amount%>
+									</span>
+								</div>
+								<div>
+									<span class="rate-tool__search-result-body-left_label">Est. Credit</span>
+									<span class="rate-tool__search-result-body-left_data">
+										<%=Credit%>
+									</span>
+								</div>
+							</div>
+							<div class=" col-sm-8 col-xs-12 rate-tool__search-result-body__second--row">
+								<div>
+									<span class="rate-tool__search-result-body-right_label">Loan Term</span>
+									<span class="rate-tool__search-result-body-right_label adjust">APR
+										<%=AprDisc%>
+											<span class="disclosure"></span>
+									</span>
+									<span class="rate-tool__search-result-body-right_label desktop adjust">Monthly Payment</span>
+									<span class="rate-tool__search-result-body-right_label nondesktop adjust">Mo. Payment</span>
+								</div>
+								<div>
+									<span class="rate-tool__search-result-body-right_data term">
+										<%=Term1%> Mo.</span>
+									<span class="rate-tool__search-result-body-right_data">
+										<%=Apr1%>%</span>
+									<span class="rate-tool__search-result-body-right_data">$
+										<%=Payment1%>
+									</span>
+								</div>
+								<div>
+									<span class="rate-tool__search-result-body-right_data term">
+										<%=Term2%> Mo.</span>
+									<span class="rate-tool__search-result-body-right_data">
+										<%=Apr2%>%</span>
+									<span class="rate-tool__search-result-body-right_data">$
+										<%=Payment2%>
+									</span>
+								</div>
+								<div>
+									<span class="rate-tool__search-result-body-right_data term">
+										<%=Term3%> Mo.</span>
+									<span class="rate-tool__search-result-body-right_data">
+										<%=Apr3%>%</span>
+									<span class="rate-tool__search-result-body-right_data">$
+										<%=Payment3%>
+									</span>
+								</div>
+							</div>
+						</div>
+				</script>
+				</div>
+				<link rel="stylesheet" href="/etc/designs/chase-ux/css/d2d/d2d.min.css" type="text/css">
+			</div>
+			<!--googleoff: index-->
+			<div class="speedbump">
+				<div class="speedbump__wrapper default">
+					<div class="speedbump" role="dialog" aria-labelledby="speedbump_header" aria-modal="true" data-speedbump-type="default">
+						<div class="speedbump__inner col-xs-12 col-sm-7">
+							<h2 tabindex="-1" id="speedbump_header" class="speedbump__inner--header">You're Now Leaving Chase</h2>
+							<div tabindex="-1" id="speedbump_innertext" class="speedbump__inner--desc" aria-labelledby="speedbump_innertext">
+								<p>Chase's website terms, privacy and security policies don't apply to the site you're about to visit. Please review
+									its website terms, privacy and security policies to see how they apply to you. Chase isn't responsible for (and
+									doesn't provide) any products, services or content at this third-party site, except for products and services that
+									explicitly carry the Chase name.</p>
+							</div>
+							<div class="speedbump__inner--links col-sm-12 col-xs-12">
+								<a class="btn btn--secondary speedbump__inner--links__cancel col-sm-4 col-xs-5 cta cta--secondary chaseanalytics-track-link"
+								  data-pt-name="btn_cancel" href="#">Cancel</a>
+								<a class="btn btn--secondary speedbump__inner--links__proceed col-sm-4 col-xs-5 cta cta--primary chaseanalytics-track-link"
+								  data-pt-name="btn_proceed" href="#">Proceed</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--googleon: index-->
+			<!-- No spanish speed bump found -->
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,622 @@
+.container {
+	width: auto
+}
+
+#masthead-eyebrow {
+	padding: 20px 0
+}
+
+#header-container {
+	height: 70px
+}
+
+#header .bg-solid {
+	background-color: rgba(53, 60, 68, 1)
+}
+
+@media only screen and (max-width:767px) {
+	#header-container {
+		height: 60px
+	}
+}
+
+@media only screen and (min-width:768px) {
+	#main-content.container {
+		max-width: 100%
+	}
+}
+
+#masthead .masthead-tile .tile-title {
+	margin: 0 0 20px 0;
+	text-align: left;
+	line-height: 1.1;
+	font-weight: 300;
+	font-size: 26px;
+	color: #fff
+}
+
+#masthead p {
+	font-size: 16px;
+	text-align: left
+}
+
+#masthead p.description {
+	font-weight: 600;
+	min-height: 3em
+}
+
+#masthead .default-masthead {
+	background-size: cover;
+	width: 100%
+}
+
+#masthead .masthead-header {
+	display: flex
+}
+
+#masthead .masthead-tile {
+	padding: 20px 0;
+	position: relative;
+	display: flex;
+	flex-direction: column
+}
+
+#masthead .masthead-tile .inner {
+	width: 100%
+}
+
+#masthead .masthead-tile:not(:first-child) {
+	border-left: 2px solid #fff
+}
+
+#masthead .button-container {
+	text-align: center;
+	margin: auto 0 0
+}
+
+#masthead .button-container .button {
+	padding: 8px 0;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: normal;
+	max-width: 200px;
+	width: 100%
+}
+
+#masthead .glyph-truecar:before {
+	font-size: 24px
+}
+
+#masthead .footnote-link {
+	font-size: 12px
+}
+
+#masthead .three-tile .masthead-tile .tile-title {
+	font-size: 36px
+}
+
+#masthead .three-tile .masthead-tile {
+	padding: 40px 45px 20px
+}
+
+#masthead .three-tile .masthead-tile .inner {
+	margin-bottom: 15px
+}
+
+#masthead .three-tile .masthead-tile.refi-tile {
+	padding-right: 20px
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 30px;
+	color: #414042;
+	font-weight: 300;
+	font-size: 36px
+}
+
+#calculators {
+	padding: 20px 30px
+}
+
+#calculators .calc-tabs {
+	padding: 15px 0
+}
+
+#calculators .nav-tabs {
+	margin-bottom: -1px
+}
+
+#calculators .nav-tabs li {
+	background-color: #f1f1f1;
+	width: 302px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	border-left: none;
+	border-top: 3px solid #fff;
+	border-right: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	transition: background-color .4s ease
+}
+
+#calculators .nav>li:not(.active)>a:hover {
+	background-color: transparent
+}
+
+#calculators .nav-tabs li:hover {
+	background-color: #f1f1f1
+}
+
+#calculators .nav-tabs li:first-child {
+	border-left: 3px solid #fff
+}
+
+#calculators .nav-tabs>li>a.footnote-link {
+	bottom: 8px;
+	right: 67px
+}
+
+#calculators .nav-tabs>li>a.footnote-link.right-edit {
+	right: 29px
+}
+
+#calculators .nav-tabs>li {
+	margin-bottom: -3px
+}
+
+#calculators .nav-tabs>li>a {
+	margin: 0;
+	border-bottom-width: 0;
+	transition: none
+}
+
+#calculators .nav-tabs a {
+	color: #414042;
+	text-decoration: none
+}
+
+#calculators .nav-tabs a.footnote-link sup {
+	cursor: pointer
+}
+
+#calculators .nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li>a {
+	border-color: transparent;
+	border-radius: 0
+}
+
+#calculators .tab-pane {
+	min-height: 300px;
+	background-color: #fff;
+	padding: 15px 0
+}
+
+#calculators .tab-pane .iframe-fallback,
+#calculators .tab-pane .iframe-loader {
+	margin-top: 50px
+}
+
+#calculators .tab-pane#find-car-panel {
+	padding: 15px 30px
+}
+
+#calculators .calc-tabs .tab-pane h2 {
+	padding: 0;
+	margin: 15px 0 20px 15px;
+	text-align: left
+}
+
+#calculators .calc-tabs .tab-pane h3 {
+	padding: 0;
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 0;
+	margin-left: 15px
+}
+
+#calculators .calc-tabs .tab-pane.has-iframe h2,
+#calculators .calc-tabs .tab-pane.has-iframe h3 {
+	margin-left: 45px
+}
+
+#calculators .tab-pane#pmt-panel h3 {
+	margin-bottom: 30px
+}
+
+#calculators .tab-pane#find-car-panel h2 {
+	margin-bottom: 40px
+}
+
+#loan-panel iframe {
+	min-height: 430px
+}
+
+@media only screen and (max-width:1276px) {
+	#loan-panel iframe {
+		min-height: 480px
+	}
+}
+
+@media only screen and (max-width:844px) {
+	#loan-panel iframe {
+		min-height: 730px
+	}
+}
+
+#pmt-panel iframe {
+	min-height: 220px
+}
+
+@media only screen and (max-width:1068px) {
+	#pmt-panel iframe {
+		min-height: 290px
+	}
+}
+
+@media only screen and (max-width:844px) {
+	#pmt-panel iframe {
+		min-height: 420px
+	}
+}
+
+@media only screen and (max-width:324px) {
+	#pmt-panel iframe {
+		min-height: 450px
+	}
+}
+
+h1,
+#default-page .shaded h2 {
+	padding: 20px 0
+}
+
+#reasons .inner {
+	margin: 30px 0
+}
+
+#reasons {
+	padding: 30px 15px 0;
+	font-size: 16px
+}
+
+#reasons h2 {
+	margin: 0 0 20px 0
+}
+
+#reasons h3 {
+	font-size: 16px
+}
+
+#reasons .large {
+	font-size: 36px;
+	text-transform: uppercase
+}
+
+#offer .title h2 {
+	text-align: center
+}
+
+#offer .offer-image {
+	background-size: cover;
+	height: 280px;
+	width: 100%
+}
+
+#offer .inner {
+	text-align: center;
+	padding: 30px 0 10px
+}
+
+#offer .inner h2 {
+	margin: 0 0 10px 0
+}
+
+#offer .inner p {
+	margin: 0 0 20px 0;
+	font-size: 18px
+}
+
+#offer .cta-btn {
+	float: none !important;
+	margin: 15px 0 0 0
+}
+
+#footnotes {
+	padding-top: 0
+}
+
+@media only screen and (min-width:1850px) {
+	#offer .offer-image {
+		height: 15.1vw
+	}
+}
+
+@media only screen and (min-width:1132px) {
+	#masthead .masthead-tile.cbs-tile .service-name-text {
+		position: relative;
+		bottom: 3px
+	}
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px) {
+	#masthead .masthead-tile .tile-title {
+		font-size: 20px
+	}
+	#masthead p {
+		font-size: 15px
+	}
+	#masthead .glyph-truecar:before {
+		font-size: 20px
+	}
+	#calculators .nav-tabs li {
+		width: 226px;
+		font-size: 14px
+	}
+	#calculators .nav-tabs>li>a.footnote-link {
+		right: 47px
+	}
+	#calculators .nav-tabs>li>a.footnote-link.right-edit {
+		right: 15px
+	}
+	#reasons .large {
+		font-size: 33px;
+		line-height: 4vh
+	}
+	#reasons h3 {
+		font-size: 14px
+	}
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+	#masthead .masthead-tile .tile-title {
+		font-size: 2vw
+	}
+	#masthead p {
+		font-size: 12px
+	}
+	#masthead .glyph-truecar:before {
+		font-size: 18px
+	}
+	#masthead .button-container .button {
+		font-size: 14px
+	}
+	#masthead .three-tile .masthead-tile .tile-title {
+		font-size: 3vw
+	}
+	#masthead .three-tile .masthead-tile {
+		padding: 20px
+	}
+	#calculators .nav-tabs li {
+		width: 226px;
+		font-size: 14px
+	}
+	#calculators .nav-tabs>li>a.footnote-link {
+		right: 47px
+	}
+	#calculators .nav-tabs>li>a.footnote-link.right-edit {
+		right: 17px
+	}
+	#reasons h3 {
+		font-size: 14px
+	}
+	#reasons .large {
+		font-size: 4vw
+	}
+	#offer .inner h2 {
+		font-size: 25px
+	}
+}
+
+@media only screen and (min-width:768px) {
+	#masthead .masthead-tile .inner {
+		padding: 0 0 0 20px;
+		margin-bottom: 15px
+	}
+	#masthead .masthead-tile .description {
+		padding-right: 20px
+	}
+	#masthead .vendor-callout {
+		display: block;
+		height: 35px;
+		padding-top: 10px
+	}
+	#masthead .button-container {
+		padding: 0 20px
+	}
+	#masthead .three-tile .masthead-tile.cbs-tile {
+		padding-left: 20px;
+		padding-right: 20px
+	}
+	#masthead .three-tile .masthead-tile.cbs-tile .service-name-text {
+		padding-right: 20px
+	}
+	#masthead .three-tile .masthead-tile.cbs-tile .description {
+		padding-right: 20px
+	}
+}
+
+@media only screen and (min-width:1200px) {
+	#masthead .masthead-tile {
+		padding: 40px 0
+	}
+	#masthead .masthead-tile .inner {
+		padding: 0 0 0 40px
+	}
+	#masthead .three-tile .masthead-tile .inner {
+		padding: 0
+	}
+}
+
+@media only screen and (max-width:767px) {
+	#masthead-eyebrow p {
+		font-size: 20px
+	}
+	h1 {
+		font-size: 28px
+	}
+	h2 {
+		font-size: 22px
+	}
+	hr {
+		width: calc(100vw - 30px);
+		margin-right: auto;
+		margin-left: auto
+	}
+	.underline-m {
+		text-decoration: underline !important
+	}
+	#masthead {
+		max-width: unset;
+		max-height: unset
+	}
+	#masthead p.tile-title {
+		text-decoration: underline
+	}
+	#masthead .glyph-truecar {
+		position: absolute;
+		top: 20px;
+		right: 15px
+	}
+	#masthead .glyph-truecar:before {
+		font-size: 18px
+	}
+	#masthead .masthead-tile .tile-title {
+		font-size: 24px;
+		margin: 0 0 10px 0
+	}
+	#masthead p {
+		font-size: 12px
+	}
+	#masthead p.description {
+		min-height: unset
+	}
+	#masthead .masthead-header {
+		display: block
+	}
+	#masthead .default-masthead {
+		display: block
+	}
+	#masthead .masthead-tile {
+		padding: 20px 15px 15px 15px;
+		border-bottom: 2px solid #fff
+	}
+	#masthead .masthead-tile:not(:first-child) {
+		border: none;
+		border-bottom: 2px solid #fff
+	}
+	#masthead .masthead-tile .inner {
+		height: auto
+	}
+	#masthead .masthead-tile .panel-cta {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: inline-block
+	}
+	h1,
+	#default-page .shaded h2 {
+		line-height: 1.3;
+		padding: 5px 0 0
+	}
+	#calculators {
+		padding: 5px
+	}
+	#calculators h1,
+	#calculators h2 {
+		margin-bottom: 0;
+		padding-bottom: 0
+	}
+	#calculators .nav-tabs li {
+		width: 33%;
+		font-size: 14px;
+		border-width: 1px !important
+	}
+	#calculators .nav-tabs li a:not(.footnote-link) {
+		min-height: 82px
+	}
+	#calculators .nav-tabs>li>a.footnote-link {
+		right: calc(50% - 28px);
+		bottom: 10px
+	}
+	#calculators .nav-tabs>li>a.footnote-link.right-edit {
+		right: calc(50% - 42px)
+	}
+	#calculators .calc-tabs .tab-pane.has-iframe h2,
+	#calculators .calc-tabs .tab-pane.has-iframe h3 {
+		margin-left: 0;
+		padding: 0 15px
+	}
+	#calculators .calc-tabs .tab-pane h2 {
+		margin-bottom: 10px
+	}
+	#calculators .calc-tabs .tab-pane h3 {
+		font-size: 14px;
+		line-height: 1.6;
+		margin-bottom: 0
+	}
+	#reasons {
+		padding: 15px 15px 0 15px
+	}
+	#reasons .inner {
+		margin: 30px 0 0
+	}
+	#reasons h3 {
+		font-size: 14px
+	}
+	#reasons .large {
+		font-size: 25px
+	}
+	#offer .title h2 {
+		margin-bottom: 15px;
+		padding: 0 10px
+	}
+	#offer .offer-image {
+		height: 159px;
+		width: 100%;
+		margin: 5px 0 15px
+	}
+	#offer .inner {
+		display: block;
+		float: left;
+		width: 100%;
+		padding: 0;
+		text-align: center
+	}
+	#offer .inner h2 {
+		font-size: 20px;
+		padding: 8px 15px 10px;
+		margin: 0;
+		float: none !important
+	}
+	#offer .inner p {
+		padding: 0 20px;
+		font-size: 13px;
+		color: #414042;
+		margin-bottom: 10px
+	}
+	#offer .cta-btn {
+		float: none;
+		margin: 10px auto 0
+	}
+	#footnotes {
+		padding-bottom: 15px
+	}
+	#footnotes p {
+		font-size: 11px
+	}
+	footer .content-section .icon-container {
+		width: auto
+	}
+}
+
+@media only screen and (max-width:370px) {
+	#offer .offer-image {
+		height: 130px
+	}
+}

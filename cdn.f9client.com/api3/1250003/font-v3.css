@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url(../../../fonts/google-fonts/default/opensans-light-webfont.eot);
+  src: local('Open Sans Light'),
+      local('OpenSans-Light'),
+      url(../../../fonts/google-fonts/default/opensans-light-webfont.eot?#iefix) format('embedded-opentype'),
+      url(../../../fonts/google-fonts/default/opensans-light-webfont.woff2) format('woff2'),
+      url(../../../fonts/google-fonts/default/opensans-light-webfont.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../../fonts/google-fonts/default/OpenSans.eot);
+  src: local('Open Sans'),
+      local('OpenSans'),
+      url(../../../fonts/google-fonts/default/OpenSans.eot?#iefix) format('embedded-opentype'),
+      url(../../../fonts/google-fonts/default/OpenSans.woff2) format('woff2'),
+      url(../../../fonts/google-fonts/default/OpenSans.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../../../fonts/google-fonts/default/OpenSans-Semibold.eot);
+  src: local('Open Sans Semibold'),
+      local('OpenSans-Semibold'),
+      url(../../../fonts/google-fonts/default/OpenSans-Semibold.eot?#iefix) format('embedded-opentype'),
+      url(../../../fonts/google-fonts/default/OpenSans-Semibold.woff2) format('woff2'),
+      url(../../../fonts/google-fonts/default/OpenSans-Semibold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../../fonts/google-fonts/default/OpenSans-Bold.eot);
+  src: local('OpenSans Bold'),
+      local('OpenSans Bold'),
+      url(../../../fonts/google-fonts/default/OpenSans-Bold.eot?#iefix) format('embedded-opentype'),
+      url(../../../fonts/google-fonts/default/OpenSans-Bold.woff2) format('woff2'),
+      url(../../../fonts/google-fonts/default/OpenSans-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'CAF Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../../../fonts/1250003/default/caf-icons-v3.eot);
+    src: local('CAF Icons'), 
+         local('caf-icons'), 
+         url(../../../fonts/chase-fonts/default/caf-icons-v3.eot?#iefix) format('embedded-opentype'), 
+         url(../../../fonts/chase-fonts/default/caf-icons-v3.woff) format('woff');
+}

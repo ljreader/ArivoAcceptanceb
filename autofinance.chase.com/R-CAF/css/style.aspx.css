@@ -1,0 +1,90 @@
+
+/* style.aspx?lp=1250003 */
+.sub-nav ul li.sub-nav-item.more a:after { background: url("/R-CAF/1250003/images/arrow-down-blue.svg") no-repeat center center; }
+#line-arrow { background: url("/R-CAF/1250003/images/arrow-line.png") no-repeat center center; }
+select { -webkit-appearance: none; -moz-appearance: none; background: #fff url("/R-CAF/1250003/images/select-arrow.png") no-repeat scroll right 0.2em; border-radius: 0; }
+select::-ms-expand { display: none; }
+@media only screen and (max-width: 767px) {
+    select { background-position: right 0.5em; }
+}
+
+#default-page .offer-image { background-image: url("/R-CAF/1250003/images/mazda_oem_banner_640x184.jpg"); }
+@media only screen and (min-width: 768px) {
+    #default-page .offer-image { background-image: url("/R-CAF/1250003/images/mazda_oem_banner_1280x230.jpg"); }
+}
+
+/* TrueCar */
+@media only screen and (min-width: 768px) {
+    .x-sell-image { background-image: url("/R-CAF/1250003/images/true_car_banner.jpg"); }
+}
+
+/* HOMEPAGE */
+#masthead .default-masthead { background-image: url("/R-CAF/1250003/images/hp_main_640x796.jpg"); }
+@media only screen and (min-width: 768px) {
+    #masthead .default-masthead { background-image: url("/R-CAF/1250003/images/hp_main_1280x308.jpg"); }
+    #masthead .default-masthead.three-tile { background-image: url("/R-CAF/1250003/images/hp_main_1280x308_original.jpg"); }
+}
+
+/* CBS */
+#masthead .cbs-masthead { background-image: url("/R-CAF/1250003/images/cbs_main_640x924.jpg"); }
+#cbs-page .benefits { background-image: url("/R-CAF/1250003/images/640x1280-f00.png"); }
+#cbs-page .apply-image { background-image: url("/R-CAF/1250003/images/sample_rate_table.gif"); }
+
+@media only screen and (min-width: 768px) {
+    #masthead .cbs-masthead { background-image: url("/R-CAF/1250003/images/cbs_main_1280x220.jpg"); }
+    #cbs-page .benefits { background-image: url("/R-CAF/1250003/images/1280x640-f00.png"); }
+    #cbs-page .apply-image { background-image: url("/R-CAF/1250003/images/sample_rate_table.gif"); }
+    #cbs-page .cbs-cta-bkgd-image { background-image: url("/R-CAF/1250003/images/sample_rate_table.gif"); }
+}
+
+/* Auto Loans */
+#masthead .loan-masthead { background-image: url("/R-CAF/1250003/images/cad_main_640x616.jpg"); }
+#threetile .loan-threetile { background-image: url("/R-CAF/1250003/images/CAD_auto_loan_finance_car.jpg"); }
+@media only screen and (min-width: 768px) {
+    #masthead .loan-masthead { background-image: url("/R-CAF/1250003/images/cad_main_1280x220.jpg"); }
+    #threetile .loan-threetile { background-image: url("/R-CAF/1250003/images/cad_finance_car_1280x400.jpg"); }
+}
+
+/* Site Map */
+#masthead .sitemap-masthead { background-image: url("/R-CAF/1250003/images/sitemap_640x300.jpg"); }
+@media only screen and (min-width: 768px) {
+    #masthead .sitemap-masthead { background-image: url("/R-CAF/1250003/images/sitemap_1280x300.jpg"); }    
+}
+
+/* Refi */
+#masthead .refi-masthead { background-image: url("/R-CAF/1250003/images/refi_main_640x400.jpg"); }
+#refi-page .apply-image { background-image: url("/R-CAF/1250003/images/refi_640x250.jpg"); }
+@media only screen and (min-width: 768px) {
+    #masthead .refi-masthead { background-image: url("/R-CAF/1250003/images/refi_main_1280x280.jpg"); }
+    #refi-page .apply-image { background-image: url("/R-CAF/1250003/images/refi_1280x300.jpg"); }
+}
+
+/* Driver's Seat */
+#masthead .drivers-seat-masthead { background-image: url("/R-CAF/1250003/images/drivers_seat/main_m_640_346.jpg"); }
+@media only screen and (min-width: 768px) {
+    #masthead .drivers-seat-masthead { background-image: url("/R-CAF/1250003/images/drivers_seat/main_1280x220.jpg"); }
+}
+
+/* Tile images */
+@media only screen and (max-width: 767px) {
+    .tile-image .tile-ds-article-1 { background-image:url('/R-CAF/1250003/images/drivers_seat/article_carbreakup_190x160.jpg'); }
+    .tile-image .tile-ds-article-2 { background-image:url('/R-CAF/1250003/images/drivers_seat/subaru_190x160.jpg'); }
+    .tile-image .tile-ds-article-3 { background-image:url('/R-CAF/1250003/images/drivers_seat/grownup_190x160.jpg'); }
+}
+
+@media only screen and (min-width: 768px) {
+    .tile-image .tile-ds-article-1 { background-image:url('/R-CAF/1250003/images/drivers_seat/article_carbreakup_360x158.jpg'); }
+    .tile-image .tile-ds-article-2 { background-image:url('/R-CAF/1250003/images/drivers_seat/subaru_360x158.jpg'); }
+    .tile-image .tile-ds-article-3 { background-image:url('/R-CAF/1250003/images/drivers_seat/grownup_360x158.jpg'); }
+}
+
+/* Article landing page tile backgrounds */
+.article-tile .has-bkgd.small-top-left { background-image:url(''); }
+.article-tile .has-bkgd.small-top-right { background-image:url(''); }
+.article-tile .has-bkgd.small-bottom-left { background-image:url(''); }
+.article-tile .has-bkgd.small-bottom-right { background-image:url(''); background-position: right; }
+.article-tile .has-bkgd.medium-left { background-image:url(''); }
+.article-tile .has-bkgd.medium-right { background-image:url(''); background-position: right; }
+.article-tile .has-bkgd.large-left { background-image:url(''); background-position: right; }
+.article-tile .has-bkgd.large-right { background-image:url(''); }
+

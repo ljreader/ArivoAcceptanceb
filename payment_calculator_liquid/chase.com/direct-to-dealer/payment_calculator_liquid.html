@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="/etc/designs/chase-ux/favicon.ico" />
+	<link rel="icon" href="/etc/designs/chase-ux/favicon.ico" />
+	<link rel="apple-touch-icon" href="/etc/designs/chase-ux/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/etc/designs/chase-ux/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/etc/designs/chase-ux/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/etc/designs/chase-ux/favicon-152.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="/etc/designs/chase-ux/favicon-144.png">
+	<link rel="preload" href="/c/031118/etc/designs/chase-ux/css/site.min.css" as="style" type="text/css">
+	<meta content="app-id=298867247, affiliate-data=JPMorganChase" name="apple-itunes-app">
+	<title>payment_calculator</title>
+	<link rel="stylesheet" href="/c/031118/etc/designs/chase-ux/css/blue-ui.min.css" type="text/css">
+	<link rel="stylesheet" href="/c/031118/etc/designs/chase-ux/css/site.min.css" type="text/css">
+
+	<div class="theme theme-selector"></div>
+	<script>
+		(function (e) {
+			"use strict";
+			e.picturefill = function () {
+				var t = e.document.getElementsByTagName("span");
+				for (var n = 0, r = t.length; n < r; n++) {
+					if (t[n].getAttribute("data-picture") !== null) {
+						var i = t[n].getElementsByTagName("span"),
+							s = [];
+						for (var o = 0, u = i.length; o < u; o++) {
+							var a = i[o].getAttribute("data-media");
+							if (!a || e.matchMedia && e.matchMedia(a).matches) {
+								s.push(i[o])
+							}
+						}
+						var f = t[n].getElementsByTagName("img")[0];
+						if (s.length) {
+							var l = s.pop();
+							if (!f || f.parentNode.nodeName === "NOSCRIPT") {
+								f = e.document.createElement("img");
+								f.alt = t[n].getAttribute("data-alt")
+							} else if (l === f.parentNode) {
+								continue
+							}
+							f.src = l.getAttribute("data-src");
+							l.appendChild(f);
+							f.removeAttribute("width");
+							f.removeAttribute("height")
+						} else if (f) {
+							f.parentNode.removeChild(f)
+						}
+					}
+				}
+			};
+			if (e.addEventListener) {
+				e.addEventListener("resize", e.picturefill, false);
+				e.addEventListener("DOMContentLoaded", function () {
+					e.picturefill();
+					e.removeEventListener("load", e.picturefill, false)
+				}, false);
+				e.addEventListener("load", e.picturefill, false)
+			} else if (e.attachEvent) {
+				e.attachEvent("onload", e.picturefill)
+			}
+		})(this)
+	</script>
+	<script src="/c/031118/etc/designs/chase-ux/clientlibs/jquery/js/jquery-1.10.2.min.js"></script>
+	<!--[if lte IE 9]>
+    <script src="/c/031118/etc/designs/chase-ux/clientlibs/chase-ux/js/vendor/jquery-ajaxtransport-xdomainrequest.js"></script>
+    <script src="/c/031118/etc/designs/chase-ux/clientlibs/modernizr/js/modernizr-2.8.3.min.js"></script>
+  <![endif]-->
+	<script>
+		var tagManagerConfig = {
+			tagServer: "https://www.chase.com"
+		};
+	</script>
+	<script src="/c/031118/apps/chase/clientlibs/foundation/scripts/Reporting.js"></script>
+	<script>
+		var langRedirectURL = "";
+	</script>
+	<script src="/c/031118/etc/designs/chase-ux/clientlibs/require/js/require.min.js"></script>
+	<script>
+		requirejs.config({
+			baseUrl: '/c/031118/etc/designs/chase-ux/clientlibs/chase-ux/js',
+			paths: {
+				"adservice": "https://sites.chase.com/apps/campaignmanagement/clientlibs/slotplacement/js/slotplacement.min",
+				"slotplacement/slotplacementconfig": "https://sites.chase.com/services/campaignmanagement/clientconfig.slotplacementconfig",
+				"content/conf/appsconfig": tagManagerConfig.tagServer + "/etc/chase/appsconfig"
+			}
+		});
+		define("jquery", [], function () {
+			return jQuery;
+		});
+		define("slotplacement/clientconfig", function () {
+			return {
+				timeout: "4000"
+			}
+		});
+	</script>
+	<script src="/c/031118/etc/designs/chase-ux/clientlibs/chase-ux/js/dist/chase-ux.min.js"></script>
+
+	<script>
+		require(["main"], function () {});
+
+		/* Check for XFS */
+		if (top != self) {
+			require(["amd/xfs"], function (XFS) {
+				XFS.init();
+			});
+		}
+	</script>
+
+	<script>
+		require(["main"], function () {
+
+			var cookieConfig = {
+				homeEquityCookie: false,
+				mortgageCookie: false
+			};
+			require(["amd/cookie.chase-campaign"], function (ChaseCampaign) {
+				ChaseCampaign.init(cookieConfig);
+			});
+
+		});
+	</script>
+
+</head>
+
+<body data-archetype="returning" data-voc-referer="http://www.chase.com/content/chase-ux/en/structured/module/direct-to-dealer/payment_calculator_liquid.html">
+	<div class="home__body">
+		<a id="skipToMainContent" href="#main" class="skiplink">Skip to main content</a>
+		<!--googleoff: index-->
+		<div class="browserupdate">
+			<div class="browser-message container-fluid">
+				<div class="feature-container">
+					<div class="browser-message__inner">
+						<div class="browser-message__inner-container">
+							<img class="browser-message__icon" src="/etc/designs/chase-ux/css/img/ie_alert.png" alt="Alert Message Icon" />
+							<div class="browser-message__title">
+								<p>Please update your browser.</p>
+							</div>
+							<div class="browser-message__desc">
+								<p>Please update your browser now to help protect your accounts and give you a better experience on our site.&nbsp;
+									<a
+									  class="chaseanalytics-track-link regular-link " data-pt-name="fm_browser-msg" href="https://www.chase.com/digital/resources/privacy-security/security/system-requirements">See your browser choices</a>.</p>
+							</div>
+							<a class="browser-message__dismiss-btn" href="#">
+								<span class="icon-close" aria-hidden="true"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--googleon: index-->
+		<!--googleoff: index-->
+		<div class="site-message container-fluid">
+			<span class="accessible-text">Begin Site Message Content</span>
+			<div class="feature-container">
+				<div class="site-message__inner">
+					<div class="site-message__inner-container">
+						<img class="site-message__icon" src="/etc/designs/chase-ux/css/img/high-alert-icon.png" alt="Alert Message Icon" />
+						<div class="site-message__title"></div>
+						<div class="site-message__desc"></div>
+					</div>
+				</div>
+			</div>
+			<span class="accessible-text">End Site Message Content</span>
+		</div>
+		<!--googleon: index-->
+		<!--googleoff: index-->
+		<div class="logoff">
+			<div class="timeout-message__wrapper">
+				<div class="timeout-message__container">
+					<div class="timeout-message container-fluid">
+						<div class="feature-container">
+							<div class="timeout-message__inner">
+								<div class="timeout-message__text">
+									<p class="timeout-message__text-msg" tabindex="-1" data-session-message>
+										We’ve signed you out of your account.</p>
+									<p class="timeout-message__text-msg" tabindex="-1" data-logoff-message>
+										<span class="timeout-message__checkmark">
+											<img src="/etc/designs/chase-ux/css/img/checkmark.png" alt="Logoff" />
+										</span>You’ve successfully signed out</p>
+									<button type="button" class="timeout-message__dismiss-btn">
+										<span class="icon-close"></span>
+										<span class="accessible-text">Close this message</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--googleon: index-->
+		<script>
+			require(["main", "adservice"], function () {
+				require(["slotplacement/topic", "amd/browser-message"], function (Topic, BrowserMessage) {
+					var options = {
+						url: "https://secure.chasecdn.com",
+						audienceIds: ""
+					};
+					Topic.subscribe('adUpdate', function (pageId, data) {
+
+						if (data._a) {
+							options.audienceIds = data._a;
+						}
+						BrowserMessage.init(options);
+
+					});
+					Topic.subscribe('adError', function () {
+
+						BrowserMessage.init(options)
+
+					});
+				});
+			});
+		</script>
+		<div class="module d2dhtmlcomponent">
+			<link rel="stylesheet" type="text/css" href="/etc/designs/chase-ux/css/d2d/d2d.min.css">
+			<script src="/etc/designs/chase-ux/clientlibs/chase-ux/js/d2d/d2d.min.js"></script>
+
+
+			<div class="payment-calculator">
+				<span class="accessible-text">Start of Payment Calculator Form.</span>
+				<form method="" enctype="" action="https://">
+					<fieldset>
+						<legend>Payment Calculator</legend>
+						<p class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<label>
+								<span class="label__text loan-amount">Amount
+									<span class="tooltip-wrapper">
+										<a href="" data-toggle="tooltip" data-trigger="hover" data-placement="auto bottom" class="tooltip__text" title="Enter the amount you think you'll need to purchase or refinance your car.">
+											<img alt="tool tip icon for Amount" src="/etc/designs/chase-ux/css/img/inf-icon.png" class="tooltip__icon" style='margin-top : -1px'
+											/>
+										</a>
+									</span>
+								</span>
+								<span class="field__validation loan-amount">
+									<span class="input__placeholder--prefix" data-characters="1.5">$</span>
+									<input aria-required="true" aria-label="Amount" type="text" name="requested-loan-amount" id="paycalc-loanAmount" class="input"
+									  maxlength="6" placeholder="0,000.00" inputmode="numeric" data-attr-loan-max="999999" data-attr-loan-min="4000">
+								</span>
+							</label>
+						</p>
+						<p class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<label>
+								<span class="label__text apr">APR
+									<span class="tooltip-wrapper">
+										<a href="" data-toggle="tooltip" data-trigger="hover" data-placement="auto bottom" class="tooltip__text" title="We'll let you know your actual Annual Percentage Rate (APR) when you apply and we base it on many factors, including your: credit history, car's year, make and model, the actual amount financed, and the term of your loan. For help determining your APR, choose 'Get a rate' above. ">
+											<img alt="tool tip icon for APR" src="/etc/designs/chase-ux/css/img/inf-icon.png" class="tooltip__icon" style='margin-top : -1px'
+											/>
+										</a>
+									</span>
+								</span>
+								<span class="field__validation apr">
+									<span data-toggle="tooltip" class="tooltip__text">
+										<input aria-required="true" type="text" aria-label="APR" name="paycalc-apr" id="paycalc-apr" class="input" maxlength="5"
+										  placeholder="0.00%" inputmode="numeric" data-attr-apr-max="99" data-attr-apr-min="0">
+									</span>
+								</span>
+							</label>
+						</p>
+						<p class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<label>
+								<span class="label__text loan-term">Term</span>
+								<span class="field__validation loan-term">
+									<select aria-required="true" aria-label="Term" name="paycalc-loanTerm" id="paycalc-loanTerm" class="d2d select webkit">
+										<option value="-1" disabled="true" selected="true">Choose one</option>
+										<option value="12">12 Months</option>
+										<option value="24">24 Months</option>
+										<option value="36">36 Months</option>
+										<option value="48">48 Months</option>
+										<option value="54">54 Months</option>
+										<option value="60">60 Months</option>
+										<option value="66">66 Months</option>
+										<option value="72">72 Months</option>
+										<option value="75">75 Months</option>
+										<option value="84">84 Months</option>
+									</select>
+								</span>
+							</label>
+						</p>
+					</fieldset>
+					<div class="form-controls">
+						<p>
+							<button id="paycalc-reset" class="secondary chaseanalytics-track-link" data-pt-name="PaymentCalc-Reset-Btn">Reset</button>
+						</p>
+						<p>
+							<button id="paycalc-calculate" class="primary-disabled chaseanalytics-track-link" data-pt-name="PaymentCalc-Calculate-Btn">Calculate</button>
+						</p>
+					</div>
+				</form>
+				<span class="accessible-text">End of Payment Calculator Form.</span>
+
+				<span class="accessible-text">Start of Payment Calculator Search Results.</span>
+				<div class="payment-calculator__results row feature-container">
+					<p class="result__repeat-text">Scroll down to see your results.</p>
+					<span class="accessible-text">After 3 calculations, the oldest result will be removed.</span>
+					<div class="payment-calculator__results-wrapper"></div>
+				</div>
+				<span class="accessible-text">End of Payment Calculator Search Results.</span>
+
+				<div class="payment-calculator__disclosure row feature-container">
+					<script id="paymentCalcResultTemplate" type="text/template">
+						<div class="result__card col-lg-4 col-med-4 col-sm-4 col-xs-12" id="resultSet<%= resultsRow %>">
+
+							<div class="result__card--total">
+								<p class="result__card--total-amount" tabindex="0">$
+									<%= payment %>
+								</p>
+								<p class="result__card--total-per">Monthly Loan Payment</p>
+							</div>
+							<div class="result__card--detail detail-1">
+								<div>
+									<p>
+										<span class="result__detail--labels">Term</span>
+										<span class="result__detail--values">
+											<%= term %> months</span>
+									</p>
+									<p>
+										<span class="result__detail--labels">APR</span>
+										<span class="result__detail--values">
+											<%= apr %>%</span>
+									</p>
+									<p>
+										<span class="result__detail--labels">Amount</span>
+										<span class="result__detail--values">$
+											<%= amount %>
+										</span>
+									</p>
+									<p>
+										<span class="result__detail--labels">Total paid</span>
+										<span class="result__detail--values">$
+											<%= total %>
+										</span>
+									</p>
+									<p>
+										<span class="result__detail--labels">Interest</span>
+										<span class="result__detail--values">$
+											<%= interest  %>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="result__card--close">
+								<a href="#" class="icon-close" role="button">
+									<span class="accessible-text">Remove $
+										<%= payment %>.</span>
+								</a>
+							</div>
+						</div>
+					</script>
+				</div>
+			</div>
+			<!--googleoff: index-->
+			<div class="speedbump">
+				<div class="speedbump__wrapper default">
+					<div class="speedbump" role="dialog" aria-labelledby="speedbump_header" aria-modal="true" data-speedbump-type="default">
+						<div class="speedbump__inner col-xs-12 col-sm-7">
+							<h2 tabindex="-1" id="speedbump_header" class="speedbump__inner--header">You're Now Leaving Chase</h2>
+							<div tabindex="-1" id="speedbump_innertext" class="speedbump__inner--desc" aria-labelledby="speedbump_innertext">
+								<p>Chase's website terms, privacy and security policies don't apply to the site you're about to visit. Please review
+									its website terms, privacy and security policies to see how they apply to you. Chase isn't responsible for (and
+									doesn't provide) any products, services or content at this third-party site, except for products and services that
+									explicitly carry the Chase name.</p>
+							</div>
+							<div class="speedbump__inner--links col-sm-12 col-xs-12">
+								<a class="btn btn--secondary speedbump__inner--links__cancel col-sm-4 col-xs-5 cta cta--secondary chaseanalytics-track-link"
+								  data-pt-name="btn_cancel" href="#">Cancel</a>
+								<a class="btn btn--secondary speedbump__inner--links__proceed col-sm-4 col-xs-5 cta cta--primary chaseanalytics-track-link"
+								  data-pt-name="btn_proceed" href="#">Proceed</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--googleon: index-->
+			<!-- No spanish speed bump found -->
+		</div>
+</body>
+
+</html>
