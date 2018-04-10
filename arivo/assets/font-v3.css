@@ -9,17 +9,21 @@
       url(../../../fonts/google-fonts/default/opensans-light-webfont.woff2) format('woff2'),
       url(../../../fonts/google-fonts/default/opensans-light-webfont.woff) format('woff');
 }
+
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans'); */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: url(../../../fonts/google-fonts/default/OpenSans.eot);
+  src: url('https://fonts.googleapis.com/css?family=Open+Sans');
   src: local('Open Sans'),
       local('OpenSans'),
       url(../../../fonts/google-fonts/default/OpenSans.eot?#iefix) format('embedded-opentype'),
       url(../../../fonts/google-fonts/default/OpenSans.woff2) format('woff2'),
       url(../../../fonts/google-fonts/default/OpenSans.woff) format('woff');
 }
+
+
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;

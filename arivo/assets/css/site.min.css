@@ -1,3 +1,5 @@
+/* https://www.chase.com/c/040818/etc/designs/chase-ux/css/site.min.css */
+
 @font-face {
 	font-family: 'icomoon';
 	src: url("fonts/icomoon.eot?xm0hfo");
@@ -18283,7 +18285,6 @@ a.caret-link {
 
 .signin__wrapper .signin.jpui {
 	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.96);
 	border-radius: 5px;
 	max-width: 21.25em;
 	padding: 1.25em 0;
@@ -18561,7 +18562,6 @@ a.caret-link {
 	}
 	.signin-module__inner .cpo-signin-container iframe {
 		background-color: #fff;
-		background-color: rgba(255, 255, 255, 0.96);
 		border: 1px solid #ccc;
 		border-radius: 5px;
 		width: 21.25em;
@@ -19342,7 +19342,6 @@ a.caret-link {
 
 .routable-cpo-signin-module__inner .cpo-routable-signin-container iframe {
 	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.96);
 	border-radius: 5px;
 	width: 21.25em;
 	height: 19em;
@@ -21294,7 +21293,7 @@ a.caret-link {
 .tooltip.fade.right.in .close-wrapper .close::before,
 .tooltip.fade.bottom.in .close-wrapper .close::before,
 .tooltip.fade.left.in .close-wrapper .close::before {
-	content: "î˜‘";
+	content: "";
 	font-family: "icomoon";
 	font-style: normal;
 	font-variant: normal;

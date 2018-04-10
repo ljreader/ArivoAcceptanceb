@@ -1,3 +1,5 @@
+/* https://autofinance.chase.com/R-CAF/css/default.min.css */
+
 .container {
 	width: auto
 }
@@ -7,11 +9,11 @@
 }
 
 #header-container {
-	height: 86px
+	height: 70px
 }
 
 #header .bg-solid {
-	background-color: #414042
+	background-color: rgba(53, 60, 68, 1)
 }
 
 @media only screen and (max-width:767px) {

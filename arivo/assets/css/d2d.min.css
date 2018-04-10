@@ -1,3 +1,5 @@
+/* https://www.chase.com/etc/designs/chase-ux/css/d2d/d2d.min.css */
+
 button {
 	border-radius: .313em;
 	padding: .5em 2.5625em;
@@ -778,7 +780,7 @@ select::-ms-expand {
 .tooltip.fade.right.in .close-wrapper .close::before,
 .tooltip.fade.bottom.in .close-wrapper .close::before,
 .tooltip.fade.left.in .close-wrapper .close::before {
-	content: "î˜‘";
+	content: "";
 	font-family: "icomoon";
 	font-style: normal;
 	font-variant: normal;

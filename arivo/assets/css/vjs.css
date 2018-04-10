@@ -3,6 +3,10 @@ Video.js Default Styles (http://videojs.com)
 Version 4.5.1
 Create your own skin at http://designer.videojs.com
 */
+
+https://cdn.f9client.com/api3/file/video-js-v11/default/vjs.css?__gda__=exp=1523336767~acl=/api3/file/video-js-v11/default/vjs.css*~hmac=7350979b727b2d0250e45132b585a3c03835048994349404dc033fd986dccefc
+
+
 /* SKIN
 ================================================================================
 The main class name for all skin-specific styles. To make your own skin,
@@ -20,8 +24,7 @@ The control icons are from a custom font. Each icon corresponds to a character
 */
 @font-face {
   font-family: 'VideoJS';
-	src: url('https://cdn.f9client.com/api3/file/video-js-v11/default/vjs.css?__gda__=exp=1523260483~acl=/api3/file/video-js-v11/default/vjs.css*~hmac=1406f1d08d5b0b72322ef01da32a9704a46775741338e01a4deecc3bced48139');
-	
+  src: url('../../../fonts/video-js/default/vjs.eot');
   src: url('../../../fonts/video-js/default/vjs.eot?#iefix') format('embedded-opentype'), url('../../../fonts/video-js/default/vjs.woff') format('woff'), url('../../../fonts/video-js/default/vjs.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;

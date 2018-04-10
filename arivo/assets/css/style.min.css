@@ -1,3 +1,5 @@
+/* https://autofinance.chase.com/R-CAF/css/style.min.css */
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: #414042
@@ -767,121 +769,121 @@ a.button.sign-in:active {
 }
 
 .glyph-app-status:before {
-	content: ""
+	content: "ï„€"
 }
 
 .glyph-loan-service:before {
-	content: ""
+	content: "ï„"
 }
 
 .glyph-loans:before {
-	content: ""
+	content: "ï„‚"
 }
 
 .glyph-checklist:before {
-	content: ""
+	content: "ï„ƒ"
 }
 
 .glyph-buying-service:before {
-	content: ""
+	content: "ï„„"
 }
 
 .glyph-cbs-competitive:before {
-	content: ""
+	content: "ï„…"
 }
 
 .glyph-redeem:before {
-	content: ""
+	content: "ï„†"
 }
 
 .glyph-see-others-paid:before {
-	content: ""
+	content: "ï„‡"
 }
 
 .glyph-caf-icon:before {
-	content: ""
+	content: "ï„ˆ"
 }
 
 .glyph-weblink:before {
-	content: ""
+	content: "ï„‰"
 }
 
 .glyph-down-arrow:before {
-	content: ""
+	content: "ï„Š"
 }
 
 .glyph-faq:before {
-	content: ""
+	content: "ï„‹"
 }
 
 .glyph-learning-hub:before {
-	content: ""
+	content: "ï„Œ"
 }
 
 .glyph-overview:before {
-	content: ""
+	content: "ï„"
 }
 
 .glyph-truecar:before {
-	content: ""
+	content: "ï„Ž"
 }
 
 .glyph-finance:before {
-	content: ""
+	content: "ï„"
 }
 
 .glyph-search-dealer:before {
-	content: ""
+	content: "ï„"
 }
 
 .glyph-interest-rate:before {
-	content: ""
+	content: "ï„‘"
 }
 
 .glyph-car-payments:before {
-	content: ""
+	content: "ï„’"
 }
 
 .glyph-rate-discounts:before {
-	content: ""
+	content: "ï„“"
 }
 
 .glyph-share:before {
-	content: "";
+	content: "ï„”";
 	position: relative;
 	top: 2px
 }
 
 .glyph-facebook:before {
-	content: "";
+	content: "ï„•";
 	position: relative;
 	top: 2px
 }
 
 .glyph-twitter:before {
-	content: ""
+	content: "ï„–"
 }
 
 .glyph-linkedin:before {
-	content: ""
+	content: "ï„—"
 }
 
 .glyph-pinterest:before {
-	content: "";
+	content: "ï„˜";
 	position: relative;
 	top: 1px
 }
 
 .glyph-email:before {
-	content: ""
+	content: "ï„™"
 }
 
 .glyph-close:before {
-	content: ""
+	content: "ï„š"
 }
 
 .glyph-close2:before {
-	content: ""
+	content: "ï„›"
 }
 
 button,
@@ -1047,7 +1049,7 @@ a.button.proceed-btn:active {
 	right: 0;
 	left: 0;
 	z-index: 888;
-	min-height: 82px;
+	min-height: 60px;
 	width: 100%;
 	transition: all .3s ease
 }
@@ -2337,8 +2339,8 @@ footer .bottom-section .copyright p {
 }
 
 #x-sell h2 {
-	text-align: left;
-	margin: 0 0 5px 15px;
+	text-align: left !important;
+	margin: 0 0 5px 15px !important;
 	padding: 0
 }
 
@@ -2359,9 +2361,30 @@ footer .bottom-section .copyright p {
 	margin: 0
 }
 
+#x-sell.x-sell-car-buying-101 .inner {
+	border: 1px solid #ccc;
+	display: block;
+	text-align: center !important
+}
+
+#x-sell.x-sell-car-buying-101 .inner h2 {
+	text-align: center !important
+}
+
+#x-sell .x-sell-car-buying-101-image {
+	height: 150px
+}
+
 @media only screen and (min-width:768px) {
 	#x-sell {
 		padding: 30px
+	}
+	#x-sell.x-sell-car-buying-101 .inner {
+		display: flex;
+		text-align: left !important
+	}
+	#x-sell.x-sell-car-buying-101 .inner h2 {
+		text-align: left !important
 	}
 	.x-sell-image {
 		height: 150px;
@@ -2377,7 +2400,7 @@ footer .bottom-section .copyright p {
 
 @media only screen and (min-width:768px) and (max-width:991px) {
 	#x-sell h2 {
-		font-size: 25px
+		font-size: 25px !important
 	}
 	#x-sell .glyph-truecar:before {
 		font-size: 28px
@@ -2386,14 +2409,14 @@ footer .bottom-section .copyright p {
 
 @media only screen and (min-width:992px) and (max-width:1200px) {
 	#x-sell h2 {
-		font-size: 28px
+		font-size: 28px !important
 	}
 }
 
 @media only screen and (max-width:767px) {
 	#x-sell h2 {
-		font-size: 18px;
-		text-align: left;
+		font-size: 18px !important;
+		text-align: left !important;
 		margin: 20px 0 10px 0 !important;
 		width: 100%
 	}
@@ -2455,7 +2478,7 @@ footer .bottom-section .copyright p {
 
 #VideoModal .video-js {
 	width: 100% !important;
-	height: auto !important
+	max-height: 336px !important
 }
 
 @media only screen and (max-width:767px) {

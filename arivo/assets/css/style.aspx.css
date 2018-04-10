@@ -1,3 +1,4 @@
+/* https://autofinance.chase.com/R-CAF/css/style.aspx?lp=1250003 */
 .sub-nav ul li.sub-nav-item.more a:after {
 	background: url("/R-CAF/1250003/images/arrow-down-blue.svg") no-repeat center center;
 }
@@ -44,15 +45,15 @@ select::-ms-expand {
 /* HOMEPAGE */
 
 #masthead .default-masthead {
-	background-image: url("http://natbg.com/wp-content/uploads/2016/09/forests-winding-forest-road-sunshine-trees-sunlight-roads-blacktop-pictures-for-desktop.jpg");
+	background-image: url("/R-CAF/1250003/images/hp_main_640x796.jpg");
 }
 
 @media only screen and (min-width: 768px) {
 	#masthead .default-masthead {
-		background-image: url("http://natbg.com/wp-content/uploads/2016/09/forests-winding-forest-road-sunshine-trees-sunlight-roads-blacktop-pictures-for-desktop.jpg");
+		background-image: url("/R-CAF/1250003/images/hp_main_1280x308.jpg");
 	}
 	#masthead .default-masthead.three-tile {
-		background-image: url("http://natbg.com/wp-content/uploads/2016/09/forests-winding-forest-road-sunshine-trees-sunlight-roads-blacktop-pictures-for-desktop.jpg");
+		background-image: url("/R-CAF/1250003/images/hp_main_1280x308_original.jpg");
 	}
 }
 
@@ -89,31 +90,31 @@ select::-ms-expand {
 /* Auto Loans */
 
 #masthead .loan-masthead {
-	background-image: url("http://natbg.com/wp-content/uploads/2016/09/forests-winding-forest-road-sunshine-trees-sunlight-roads-blacktop-pictures-for-desktop.jpg");
+	background-image: url("/R-CAF/1250003/images/cad_main_640x616.jpg");
 }
 
 #threetile .loan-threetile {
-	background-image: url("http://natbg.com/wp-content/uploads/2016/09/forests-winding-forest-road-sunshine-trees-sunlight-roads-blacktop-pictures-for-desktop.jpg");
+	background-image: url("/R-CAF/1250003/images/CAD_auto_loan_finance_car.jpg");
 }
 
 @media only screen and (min-width: 768px) {
 	#masthead .loan-masthead {
-		background-image: url("http://natbg.com/wp-content/uploads/2016/09/forests-winding-forest-road-sunshine-trees-sunlight-roads-blacktop-pictures-for-desktop.jpg");
+		background-image: url("/R-CAF/1250003/images/cad_main_1280x220.jpg");
 	}
 	#threetile .loan-threetile {
-		background-image: url("http://natbg.com/wp-content/uploads/2016/09/forests-winding-forest-road-sunshine-trees-sunlight-roads-blacktop-pictures-for-desktop.jpg");
+		background-image: url("/R-CAF/1250003/images/cad_finance_car_1280x400.jpg");
 	}
 }
 
 /* Site Map */
 
 #masthead .sitemap-masthead {
-	background-image: url("http://natbg.com/wp-content/uploads/2016/09/forests-winding-forest-road-sunshine-trees-sunlight-roads-blacktop-pictures-for-desktop.jpg");
+	background-image: url("/R-CAF/1250003/images/sitemap_640x300.jpg");
 }
 
 @media only screen and (min-width: 768px) {
 	#masthead .sitemap-masthead {
-		background-image: url("http://natbg.com/wp-content/uploads/2016/09/forests-winding-forest-road-sunshine-trees-sunlight-roads-blacktop-pictures-for-desktop.jpg");
+		background-image: url("/R-CAF/1250003/images/sitemap_1280x300.jpg");
 	}
 }
 
